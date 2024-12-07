@@ -6,6 +6,8 @@ import Register from "../pages/Register";
 import Login from "../pages/Login";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import CreateStudent from "../pages/admin/CreateStudent";
+import CreateAdmin from "../pages/admin/CreateAdmin";
+import CreateFaculty from "../pages/admin/CreateFaculty";
 
 const router = createBrowserRouter([
   {
@@ -26,10 +28,10 @@ const router = createBrowserRouter([
     path: "/admin",
     element: <App></App>,
     children: [
-      {
-        index: true,
-        element: <AdminDashboard/>,
-      },
+      // {
+      //   index: true,
+      //   element: <AdminDashboard/>,
+      // },
       {
         path: "dashboard",
         element: <AdminDashboard/>,
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: "create-student",
         element: <CreateStudent></CreateStudent>,
+      },
+      {
+        path: "create-admin",
+        element: <CreateAdmin></CreateAdmin>,
+      },
+      {
+        path: "create-faculty",
+        element: <CreateFaculty></CreateFaculty>,
       },
     ]
   },

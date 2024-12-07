@@ -1,5 +1,5 @@
 import { Layout, Menu, MenuProps } from "antd";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 // import {
 //   UploadOutlined,
 //   UserOutlined,
@@ -10,14 +10,26 @@ import { Outlet } from "react-router-dom";
 const { Header, Content, Footer, Sider } = Layout;
 
 const items: MenuProps["items"] = [
-  { key: "1", label: "Dashboard" },
-  { key: "2", label: "Profile" },
   {
-    key: "3",
+    key: "Dashboard",
+    label: <NavLink to="/admin/dashboard">Dashboard</NavLink>,
+  },
+  {
+    key: "User Management",
     label: "User Management",
     children: [
-      { key: "4", label: "Create Admin" },
-      { key: "5", label: "Create Student" },
+      {
+        key: "Create Admin",
+        label: <NavLink to="/admin/create-admin">Create Admin</NavLink>,
+      },
+      {
+        key: "Create Faculty",
+        label: <NavLink to="/admin/create-faculty">Create Faculty</NavLink>,
+      },
+      {
+        key: "Create Student",
+        label: <NavLink to="/admin/create-student">Create Student</NavLink>,
+      },
     ],
   },
 ];
@@ -35,15 +47,17 @@ const MainLayout = () => {
           console.log(collapsed, type);
         }}
       >
-      <div style={{
-        color:"white", 
-        height:'3.5rem',
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'center'
-      }}>
-        <h1>PH University</h1>
-      </div>
+        <div
+          style={{
+            color: "white",
+            height: "3.5rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h1>PH University</h1>
+        </div>
         <Menu
           theme="dark"
           mode="inline"
@@ -60,7 +74,7 @@ const MainLayout = () => {
               minHeight: 360,
             }}
           >
-           <Outlet></Outlet>
+            <Outlet></Outlet>
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
