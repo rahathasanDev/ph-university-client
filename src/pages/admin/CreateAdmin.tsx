@@ -3,7 +3,7 @@ import React from 'react';
 const CreateAdmin = () => {
   return (
     <div>
-       CreateAdmin
+       <h1>This is create admin</h1>
     </div>
   );
 };
