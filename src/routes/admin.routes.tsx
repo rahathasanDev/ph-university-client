@@ -15,7 +15,7 @@ type TSidebarItem = {
   children?: TSidebarItem[];
 };
 
-const adminPaths = [
+export const adminPaths = [
   {
     name: "Dashboard",
     path: "dashboard",
@@ -39,10 +39,15 @@ const adminPaths = [
         path: "create-student",
         element: <CreateStudent />,
       },
+      {
+        name: "Create Member",
+        path: "create-member",
+        element: <CreateStudent />,
+      },
     ],
   },
 ];
-
+// here i crate sidebar each items by using map 
 export const adminSidebarItems = adminPaths.reduce(
   (acc: TSidebarItem[], item) => {
     if (item.path && item.name) {
@@ -65,24 +70,24 @@ export const adminSidebarItems = adminPaths.reduce(
   },
   []
 );
-
-export const adminRoutes = adminPaths.reduce((acc: TRoute[], item) => {
-  if (item.path && item.element) {
-    acc.push({
-      path: item.path,
-      element: item.element,
-    });
-  }
-  if (item.children) {
-    item.children.forEach((child) => {
-      acc.push({
-        path: child.path,
-        element: child.element,
-      });
-    });
-  }
-  return acc;
-}, []);
+// // foreach never return array , but map() do 
+// export const adminRoutes = adminPaths.reduce((acc: TRoute[], item) => {
+//   if (item.path && item.element) {
+//     acc.push({
+//       path: item.path,
+//       element: item.element,
+//     });
+//   }
+//   if (item.children) {
+//     item.children.forEach((child) => {
+//       acc.push({
+//         path: child.path,
+//         element: child.element,
+//       });
+//     });
+//   }
+//   return acc;
+// }, []);
 
 // export const adminPaths = [
 //   {
