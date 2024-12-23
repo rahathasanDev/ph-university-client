@@ -1,11 +1,7 @@
 import { Layout } from "antd";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
-// import {
-//   UploadOutlined,
-//   UserOutlined,
-//   VideoCameraOutlined,
-// } from "@ant-design/icons";
+
 // import { createElement } from "react";
 
 const { Header, Content, Footer } = Layout;
