@@ -1,9 +1,8 @@
-import React from 'react';
 
 const StudentDashboard = () => {
   return (
     <div>
-      <h1>Student dashboard</h1>
+      <h1 className='text-2xl font-bold'>Student dashboard</h1>
     </div>
   );
 };

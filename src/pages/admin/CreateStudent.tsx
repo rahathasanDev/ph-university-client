@@ -1,9 +1,8 @@
-import React from 'react';
 
 const CreateStudent = () => {
   return (
     <div>
-      <h1>This is create student Dashboard</h1>
+      <h1 className='text-2xl font-semibold'>This is create student Dashboard</h1>
     </div>
   );
 };

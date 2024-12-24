@@ -39,7 +39,7 @@ const Sidebar = () => {
           justifyContent: "center",
         }}
       >
-        <h1>PH University</h1>
+        <h1 className="text-2xl font-semibold">PH University</h1>
       </div>
       <Menu
         theme="dark"

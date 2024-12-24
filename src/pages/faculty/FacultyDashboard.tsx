@@ -1,9 +1,9 @@
-import React from 'react';
 
 const FacultyDashboard = () => {
   return (
     <div>
-      FacultyDashboard
+      <h1 className='text-2xl font-semibold'> FacultyDashboard
+      </h1>
     </div>
   );
 };

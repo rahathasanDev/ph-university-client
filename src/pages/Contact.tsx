@@ -1,9 +1,9 @@
-import React from 'react';
+
 
 const Contact = () => {
   return (
     <div>
-      <h1>THis is contact page</h1>
+      <h1 className='text-xl'>THis is contact page</h1>
     </div>
   );
 };
